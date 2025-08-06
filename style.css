@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+    color: #ff6361;
+    font-family: "Google Sans Code", monospace;
+}
+
+body {
+    background-color: #00202e;
+}
+
+#footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: #2c4875;
+}
+
+#doc-title {
+    font-size: 4rem;
+}
+
+#doc-subtitle {
+    font-size: 2rem;
+    transform: translateX(5px);
+    color: #8a508f;
+}
+
+#links {
+    display: flex;
+    grid-gap: 3rem;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+a {
+    color: #ffd380;
+    text-decoration: none;
+    font-size: 7rem;
+    transition: all 0.1s;
+}
+
+a:hover {
+    font-size: 7.5rem;
+}
+
+#socials {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    grid-gap: 10px;
+}
+
+.social {
+    width: 25px;
+    height: 25px;
+}
+
+.social:hover {
+    filter: brightness(1.75);
+}
