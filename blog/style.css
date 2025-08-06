@@ -1,0 +1,86 @@
+#blog-posts {
+    color: #2c4875;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-post {
+    display: flex;
+}
+.blog-title::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #2c4875;
+    border-radius: 50%;
+    margin: 0 5px;
+    vertical-align: middle;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#login-button {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    font-size: 2rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #003f5c;
+    border-radius: 1rem;
+    padding: 10px;
+    color: #2c4875;
+}
+
+#login-button:hover {
+    border-width: 3px;
+}
+
+#login-name {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    font-size: 2rem;
+}
+
+.hide {
+    display: none !important;
+}
+
+#title {
+    color: #bc5090;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#content {
+    font-size: 1.5rem;
+    padding: 25px;
+}
+
+#date {
+    text-align: center;
+    color: #bc5090;
+}
+
+#back {
+    position: absolute;
+    font-size: 2rem;
+    background-color: transparent;
+    border-style: solid;
+
+    border-color: #003f5c;
+    border-radius: 1rem;
+    padding: 10px;
+    color: #2c4875;
+
+    transform: translateY(10px);
+    right: 10px;
+}

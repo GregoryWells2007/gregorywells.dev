@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gregory Wells - Blog</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+
+        <script src="init_firebase.js"></script>
+        <script src="loader.js"></script>
+    </head>
+    <body>
+        <div id="doc-title">Gregory Wells</div>
+        <div id="doc-subtitle">Developer - Photographer - Student</div>
+
+        <button id="login-button" onclick="googleLogin()">Login</button>
+
+        <div id="blog-posts"></div>
+        <div id="loaded-post" class="hide">
+            <button id="back" onclick="close_post()">Back</button>
+            <div id="title"></div>
+            <div id="content"></div>
+            <div id="date"></div>
+
+        </div>
+    </body>
+</html>
+
+<footer>
+    <div id="footer">&copy; 2024-2025 Gregory Wells All rights reserved.</div>
+    <div id="socials">
+        <img class="social" src="../images/logo-black.png" onclick="window.location.href='https://x.com/GregoryW2007'"></img>
+        <img class="social" src="../images/github-mark.png" onclick="window.location.href='https://github.com/GregoryWells2007'"></img>
+    </div>
+</footer>

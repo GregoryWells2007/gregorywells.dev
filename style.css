@@ -66,3 +66,7 @@ a:hover {
 .social:hover {
     filter: brightness(1.75);
 }
+
+.hide {
+    display: none;
+}
