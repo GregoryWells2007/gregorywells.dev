@@ -14,3 +14,10 @@ function create_post(inContent, inTitle) {
       console.error("Error adding document: ", error);
     });
 }
+
+function post_from_admin() {
+  create_post(
+    document.getElementById('content-input').value, 
+    document.getElementById('title-input').value
+  );
+}

@@ -117,6 +117,6 @@ async function googleLogin() {
 
   if (currentUser.isAdmin) {
     document.getElementById("blog-posts").classList.add("hide");
-    create_post("This is some new post content", "New Post Created from JS");
+    document.getElementById("create-post").classList.remove("hide");
   }
 }
