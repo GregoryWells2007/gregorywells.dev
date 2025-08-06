@@ -3,7 +3,6 @@ var adminsArray = [];
 var currentUser;
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  const app = firebase.app();
   const db = firebase.firestore();
   const users = db.collection("Users");
   const admins = users.doc("admins");
@@ -115,4 +114,9 @@ async function googleLogin() {
   newElement.id = "login-name";
   newElement.innerText = "Hello " + currentUser.name;
   parent.appendChild(newElement);
+
+  if (currentUser.isAdmin) {
+    document.getElementById("blog-posts").classList.add("hide");
+    create_post("This is some new post content", "New Post Created from JS");
+  }
 }
