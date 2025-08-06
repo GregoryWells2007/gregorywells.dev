@@ -85,7 +85,43 @@
     right: 10px;
 }
 
-textarea {
-    width: 100%;
-    height: 70vh;
+#title-input {
+    width: 90%;
+    background-color: transparent;
+    border-style: none;
+    font-size: 1.5rem;
+    font-family: "Google Sans Code", monospace;
+    color: #bc5090;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+#content-input {
+    width: 95%;
+
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+    background-color: transparent;
+    border-style: none;
+    font-size: 1.5rem;
+    font-family: "Google Sans Code", monospace;
+    color: #ff6361;
+}
+
+#post-blog {
+    font-size: 2rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #003f5c;
+    border-radius: 1rem;
+    padding: 10px;
+    color: #2c4875;
+
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
 }

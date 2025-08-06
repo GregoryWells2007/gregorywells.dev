@@ -68,27 +68,33 @@ async function load_posts() {
 
   const db = firebase.firestore();
   const snapshot = await db.collection("Posts").get();
+  
+  var postList = [];
   snapshot.forEach((doc) => {
     const data = doc.data();
+    postList.push(new blog_post(data.content, data.title, data.date.toDate()));
+  });
+  postList.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+  for (let i = 0; i < postList.length; i++) {
     var new_post = document.createElement("div");
     new_post.onclick = () =>
-      go_to_post(new blog_post(data.content, data.title, data.date.toDate()));
-
+      go_to_post(postList[i]);
+    
     new_post.classList.add("blog-post");
 
     var title = document.createElement("div");
     title.classList.add("blog-title");
-    title.innerText = data.title;
+    title.innerText = postList[i].title;
     new_post.appendChild(title);
 
     var date = document.createElement("div");
     date.classList.add("blog-date");
-    date.innerText = formatDateWithSuffix(data.date.toDate());
+    date.innerText = formatDateWithSuffix(postList[i].date);
     new_post.appendChild(date);
 
     posts.appendChild(new_post);
-  });
+  }
 }
 
 function user(name, UUID) {
